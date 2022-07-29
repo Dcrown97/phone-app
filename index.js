@@ -17,9 +17,28 @@ let inputNum = document.getElementById('tel-num');
 inputNum.addEventListener('keyup', () => {
     let inputNumValue = inputNum.value;
     if (inputNumValue.length >= 3) {
-        for (let i = 0; i < numberObj.length; i++){
-            
+        for (let i = 0; i < numberObj.mtn.length; i++) {
+            if (numberObj.mtn[i] == inputNumValue) {
+                let imageSrc = document.getElementById('img').innerHTML = '<img src="./images/mtn.png" alt="logo" style="width: 35px; height: 35px;"></img>';
+            }
         }
+        for (let i = 0; i < numberObj.airtel.length; i++) {
+            if (numberObj.airtel[i] == inputNumValue) {
+                let imageSrc = document.getElementById('img').innerHTML = '<img src="./images/airtel.png" alt="logo" style="width: 35px; height: 35px;"></img>';
+            }
+        }
+        for (let i = 0; i < numberObj.glo.length; i++) {
+            if (numberObj.glo[i] == inputNumValue) {
+                let imageSrc = document.getElementById('img').innerHTML = '<img src="./images/glo.jpg" alt="logo" style="width: 35px; height: 35px;"></img>';
+            }
+        }
+        for (let i = 0; i < numberObj.etisalat.length; i++) {
+            if (numberObj.etisalat[i] == inputNumValue) {
+                let imageSrc = document.getElementById('img').innerHTML = '<img src="./images/etisalat.svg" alt="logo" style="width: 35px; height: 35px;"></img>';
+            }
+        }
+    } else {
+        document.getElementById('img').innerHTML = ''
     }
 });
 
